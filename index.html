@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Data Exploration of Online Learning</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/2802/2802805.svg">
+	
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="container tab">
+
+		<!-- TITLE -->
+		<h2 class='title text-center'>Data Exploration of Online Learning</h2>
+		<br><br>
+
+		<!-- TABLE OF CONTENTS -->
+		<div id="toc">
+			<ul>
+				<li><a href="#intro">Introduction</a><br></li>
+				<li><a href="#analysis">Analysis</a><br>
+					<ul>
+						<li><a href="#topic1">Topic 1: Course Popularity</a></li>
+						<li><a href="#topic2">Topic 2: Student Performance</a></li>
+					</ul>
+				</li>
+				<li><a href="#reflection">Reflection</a><br></li>
+			</ul>
+		</div>
+
+		<!-- INTRODUCTION -->
+		<div id="intro">
+			<h3>Introduction</h3>
+			<p>edX is a nonprofit provider of Massive Open Online Courses (MOOCs). Founded by Harvard and MIT, edX offers courses at the university level from over 150 top American institutions. With the importance of social distancing and prevalence of self learning, these online courses provide accessible education to students around the world who wish to learn and improve their skills or explore new academic fields of interest.</p>
+			<br>
+
+			<!-- Harvard, MIT, edX logos -->
+			<div class="row text-center" id="logos">
+				<div class="col-4">
+					<img src="https://web.mit.edu/umeton/www/MIT_logo.svg" alt="MIT logo">
+				</div>
+				<div class="col-4">
+					<img src="https://cdn-blog.lawrencemcdaniel.com/wp-content/uploads/2018/01/22125436/edx-logo.png" alt="edX logo">
+				</div>
+				<div class="col-4">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Harvard_University_logo.svg" alt="Harvard logo">
+				</div>
+			</div>
+			<br>
+			
+			<p>For this dataset exploration assignment, we chose to analyze the <a href='https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources' target="_blank">EdX_2013 Academic Year Courses</a> dataset from Tableau Public. The dataset contains the course and demographic information from 641,138 registered users for 13 online edX courses offered by Harvard and MIT. For each user, the dataset includes the gender, country of residence, course title, grade achieved, whether the course was completed, whether the student received a course certification, and other details about the student’s course activity. The large number of data dimensions in this dataset provided the ability to investigate the popularity of certain subjects across demographic groups and the patterns of student activity across subjects. We structured our data exploration around the following topics and questions:</p>
+			
+			<h4>Topic 1: Course Popularity</h4>
+			<section class='topic'>
+				<ul>
+					<li>How do courses rank in popularity?</li>
+					<li>Which courses are popular in different countries?</li>
+					<li>Which courses are popular within different genders?</li>
+					<li>How does the popularity of STEM courses compare to that of humanities courses?</li>
+					<li>Which university's courses are more popular?</li>
+				</ul>
+				<h4>Topic 2: Student Performance</h4>
+				<section class='topic'>
+					<ul>
+						<li>What percentage of registered students completes the course or gains certificate? </li>
+						<li>What is the relationship between the student’s grade in the course and whether or not they received the course certification?</li>
+						<li>What is the average grade achieved by students in different countries?</li>
+						<li>How does each gender perform in different courses?</li>
+						<li>What is the average grade achieved in each course?</li>
+						<!-- <li>What is the relationship between the number of days a student is active and their grade in the course?</li> -->
+					</ul>
+			</section>
+		</div>
+
+		<!-- ANALYSIS -->
+		<div id="analysis">
+			<h3>Analysis</h3>
+			<h4 id="topic1">Topic 1: Course Popularity</h4>
+
+			<h4>How do courses rank in popularity? How does the popularity of STEM courses compare to that of humanities courses?</h4>
+
+			<!-- COURSE POPULARITY -->
+			<div class='tableauPlaceholder' id='viz1602270860566' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Viz2_16022657043790&#47;OverallCoursePopularity&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Viz2_16022657043790&#47;OverallCoursePopularity' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Viz2_16022657043790&#47;OverallCoursePopularity&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602270860566');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+			<br>
+			<h4>Which university's courses are more popular?</h4>
+
+			<!-- HARVARD VS MIT -->
+			<div class='tableauPlaceholder' id='viz1602295408094' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HarvardvsMIT_16022915064390&#47;HarvardvsMIT&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='HarvardvsMIT_16022915064390&#47;HarvardvsMIT' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HarvardvsMIT_16022915064390&#47;HarvardvsMIT&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602295408094');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+			<p>Another point of interest was the popularity of courses from the two universities in this dataset. Harvard and MIT are both well-known and prestigious universities in America, so we were curious to see if students had any preferences for the university sponsoring the course. We can see from the visualization below that MIT offered more courses than Harvard, however Harvard had a larger number of registered students in total. This could in part be due to the subjects offered by each university, however we can also take the introductory Computer Science courses offered by each school as a comparison. While both offered this introductory course, Harvard's CS course still had over 40,000 more students than MIT's CS course, as shown in the graph above. Additionally, Harvard's humanities courses were more popular than MIT's humanities courses, which might be due to Harvard's reputation as having strong humanities departments, while MIT is primarily known for its STEM programs. </p>
+			
+			<!-- STUDENTS PER COUNTRY -->			
+			<div class='tableauPlaceholder' id='viz1602296783552' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;R3&#47;R3FBYCNW4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;R3FBYCNW4' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;R3&#47;R3FBYCNW4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602296783552');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+			<h4>Which courses are popular in different countries?</h4>
+				<p>Another interesting question we explored was how the popularity of courses varied across countries. As we expected, we see that both the CS courses remain highly popular for the majority of the countries, with the MIT course appearing to be more popular around Europe, Asia, and South America, and the Harvard course being more popular in North America, Australia, and France. Only one country had The Ancient Greek Hero as their most popular course, which was  Greece. It makes sense that in Greece would place high cultural importance on their own ancient history and legacy. The Circuits and Electronics course was the most popular course in two countries, India and Pakistan, which also aligns with the popularity of engineering fields in those countries.</p>
+			<h4>Which courses are least popular in different countries?</h4>
+			<p>We also took a look at which courses were the least popular in each country. The least popular courses were slightly more varied. Elements of Structure was the overall least popular course in Asia, North America, and Australia, and Mechanics was the least popular course in South America, Japan, and parts of Europe and Africa. The Challenges of Global Poverty was also the least popular course in some European countries as well as Egypt. In Bangladesh, the least popular course was the The Ancient Greek Hero. Since ancient Greek culture has historically been more influential in the western world such as in Europe and America, it's not surprising than Asian country such as Bangladesh wouldn't be as interested in this course. </p>
+
+			<br>
+			<h4>Which courses are popular within different genders</h4>
+			<div>For the gender balance per course, the double bar chart reveals how the gender balance is close to equal for humanities courses, but is much more skewed towards males for STEM courses. Unfortunately, the original data set had missing data for gender information so the bars do not at to 100%. </div>
+
+			<!-- gender story -->
+			<div class='tableauPlaceholder' id='viz1602298746309' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6Y&#47;6Y64TMFJC&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;6Y64TMFJC' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6Y&#47;6Y64TMFJC&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602298746309');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				<!-- GENDER BALANCE PER COUNTRY -->
+				
+				<!-- GENDER BALANCE PER COURSE -->
+
+				<h4 id="topic2">Topic 2: Student Performance</h4>
+
+				<h4>What percentage of registered students completes the course or gains certificate?</h4>
+				<p></p>
+
+				<!-- REGISTERED/ CERTIFIED/ INCOMPLETE -->
+				<div class='tableauPlaceholder' id='viz1602277228402' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;StudentsPerCourse&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VizMiniProject2_16022202291120&#47;StudentsPerCourse' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;StudentsPerCourse&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602277228402');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+				<br>
+				<h4>What is the average grade achieved in each course? What is the relationship between the student’s grade in the course and whether or not they received the course certification?</h4>
+
+				<!-- AVERAGE GRADE PER COURSE -->
+				<div class='tableauPlaceholder' id='viz1602277437676' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;GradesPerCourse&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VizMiniProject2_16022202291120&#47;GradesPerCourse' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;GradesPerCourse&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602277437676');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+				<br>
+				<h4>How does each gender perform in different courses? What is the average grade achieved by students in different countries?</h4>
+
+				<!-- AVERAGE GRADE BY COUNTRY -->
+				<div>The average grade across all countries is low because users who do not audit/pay for the course do not have access to graded assessments. As a result, most of the grades we see in the dataset are 0 or close to 0, while the grades we see for users who earn a certificate are much higher. </div>
+				<div class='tableauPlaceholder' id='viz1602294238278' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MiniProject2Vis&#47;AverageGradebyCountry&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MiniProject2Vis&#47;AverageGradebyCountry' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MiniProject2Vis&#47;AverageGradebyCountry&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602294238278');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				<!-- GRADES: GENDER/ CERTIFICATION -->
+				<div class='tableauPlaceholder' id='viz1602277483440' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;AvgGrades&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VizMiniProject2_16022202291120&#47;AvgGrades' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizMiniProject2_16022202291120&#47;AvgGrades&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602277483440');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+		<!-- REFLECTION -->
+		<div id="reflection">
+			<h3>Reflection</h3>
+
+			<h4>Data Selection</h4>
+			<p>In the age of technology and social distancing, taking online courses has become an attractive alternative to traditional forms of education. Given that much of university education is now online due to the pandemic, the differences between traditional university and online education are decreasing rapidly. edX is an MOOC (massive open online course) platform created by Harvard and MIT to host free online courses at the university level to a worldwide audience. It is the most well-known online education provider, and typically a first choice for online learners. We were curious to see what insights we can find in the edX dataset about the behavior of online learners and how education could look in the future. </p>
+
+			<img src="img/excel.png" alt="a sample of our dataset">
+			<br>
+		
+			<h4>Data Processing</h4>
+			<p>Although the data was generally very clean and organized, we did have to alter it a bit in order to improve the clarity of our results. Firstly, the shortened versions of the course names were unclear in some cases, and one course, "Introduction to Computer Science I", wasn't given a shortened name at all. To fix this, we defined aliases for all the courses and gave them new names which we thought would better convey to the viewer the content of the course. We also wanted to compare courses in the humanities and in STEM, so we grouped the data into manually defined categories using Tableau's grouping feature. Additionally, we also added some calculated fields to find specific metrics such as the most popular course for each country.</p>
+			
+			<h4>Hypothesis Exploration</h4>
+			In coming up with our hypotheses, we used two main topics to guide the focus of our questions. These two topics were course popularity and student performance. Using the demographic information and course activity for each student, we explored the potential relationships between the student data and trends in course popularity and overall success in the course as measured by grades. In particular, we were interested in looking at the gender balance across students in different courses and countries, which courses were most popular in different demographic groups, and the link between a student's grade and whether they paid for a certification.
+			<br><br>
+
+			<h4>Generating Visualizations</h4>
+			To generate visualizations, we started by creating visualizations based on our initial questions, and as we worked with the data we tried different combinations of variables to see relationships between them. Throughout this process, we refined our visualizations and found which visualizations most clearly show the relationships between variables. For example, we initially had the number of students per country and most popular courses per country in the same visualization, but it turned out to be too cluttered and separating them into two graphs was a big improvement.
+			<br><br>
+
+			<h4>Findings and Final Thoughts</h4>
+		The high popularity of both the Harvard and MIT CS courses in practically all countries included in the data set indicates the rising demand for programming skils globally as more jobs prefer or require programming skills. We found that the gender distributions for courses were more evenly divided for humanities courses, while for STEM courses had many more male students than female students. This parallels how there are less female university students pursuing STEM degrees compared to male students. Although it was unfortunate that we weren't able to see accurate grades for unpaid users, it would be interesting to see whether the amount a user pays for a course correlates to higher grades or higher user retention rates since spending money could make users more motivated to finish the course. Since many colleges are currently online they are using a similar format as free or much cheaper online learning resources, the much higher cost of traditional university motivates students to finish their courses. With college tuition rising much faster than the rate of inflation and already being very expensive, open source courses like edx could become competition in the future that forces colleges to lower tuition and make higher education more accessible.
+		</div>
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="" async defer></script>
+
+</body>
+</html>
